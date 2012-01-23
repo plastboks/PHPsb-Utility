@@ -54,6 +54,7 @@
           </div>
 	        <div class="genpass-line"><span>Capitalize first digits: </span><input name="capitalize" type="checkbox" checked="checked" /></div>
 	        <div class="genpass-line"><span>Leetify sentence: </span><input name="hax" type="checkbox" /></div>
+          <div class="genpass-line"><span>Add spaces: </span><input name="spaces" type="checkbox" /></div>
         </div>
         <p><input class="genpassphrase genbutton" type="submit" name="submit" value="Generate" /></p>
       </form>
