@@ -55,13 +55,15 @@ function passphrase($array) {
   return ($array['hax'])?haxify($outString):$outString;
 }
 
-// setup array for passphrase function 
-$array = array();
-
-// set wordlist
-$array['file'] = "../lib/wordlist";
-
-// get post data
+// setup array for passphrase function
+$array = array(
+  'file' => '../lib/wordlist',
+  'i' => 0,
+  'extra' => 0,
+  'capitalize' => false,
+  'hax' => false,
+  'spaces' => false,
+);
 
 // itterations
 if ( isset($_POST['i']) ) {
@@ -73,11 +75,11 @@ if ( isset($_POST['digits']) ) {
 }
 // capitalize
 if ( isset($_POST['capitalize']) ){
-  $array['capitalize'] = 1;
+  $array['capitalize'] = true;
 }
 // leetify
 if ( isset($_POST['hax']) ) {
-  $array['hax'] = 1;
+  $array['hax'] = true;
 }
 // spacify
 if ( isset($_POST['spaces']) ) {
