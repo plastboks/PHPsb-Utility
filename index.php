@@ -8,7 +8,7 @@ require_once('function/common.php');
 <link rel="stylesheet" type="text/css" href="style.css" />
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
 <script type="text/javascript" src="javascript.js"></script>
-<title>PHP Passwrd Generator</title>
+<title>PHPsb Utility</title>
 </head>
 
 <body>
@@ -36,6 +36,14 @@ require_once('function/common.php');
       <form method="post" action="action/generate.passphrase.php">
         <div class="genpass-holder">
           <div class="genpass-line">
+            <span>Language: </span>
+            <select name="lang">
+<?php foreach (wordLists() as $list) { ?>
+              <option><?php echo $list; ?></option>
+<?php } ?>
+            </select>
+          </div>
+          <div class="genpass-line">
             <span>Number of words (1-5): </span>
             <select name="i">
               <option value="1">1</option>
@@ -58,14 +66,6 @@ require_once('function/common.php');
 	        <div class="genpass-line"><span>Capitalize first digits: </span><input name="capitalize" type="checkbox" checked="checked" /></div>
 	        <div class="genpass-line"><span>Leetify sentence: </span><input name="hax" type="checkbox" /></div>
           <div class="genpass-line"><span>Add spaces: </span><input name="spaces" type="checkbox" /></div>
-          <div class="genpass-line">
-            <span>Language: </span>
-            <select name="lang">
-<?php foreach (wordLists() as $list) { ?>
-              <option><?php echo $list; ?></option>
-<?php } ?>
-            </select>
-          </div>
         </div>
         <p><input class="genpassphrase genbutton" type="submit" name="submit" value="Generate" /></p>
       </form>
@@ -131,7 +131,7 @@ require_once('function/common.php');
       <div class="jq_genbase64_result"></div>
     </div>
   </div>
-  <div id="footer"><p>footer footer footer footer</p></div>
+  <div id="footer"><p>This is the [P]assword, [H]ash, [P]assprhase, [s]entence, [b]ase64 Utility</p></div>
 </body>
 </html>
 
