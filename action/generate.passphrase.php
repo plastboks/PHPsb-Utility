@@ -57,7 +57,7 @@ function passphrase($array) {
 
 // setup array for passphrase function
 $array = array(
-  'file' => '../lib/wordlist',
+  'file' => '../lib/wordlists/en.txt',
   'i' => 0,
   'extra' => 0,
   'capitalize' => false,
