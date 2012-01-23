@@ -1,0 +1,121 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+	font-size: 11px; 
+	color: #444; 
+	font-family: Helvetica, Arial, sans-serif; 
+	background: #575757;
+}
+
+.header {
+  margin: 0 auto;
+  width: 500px;
+  padding: 2px 20px 2px 0px;
+  margin-bottom: 0px;
+}
+
+.header h1 {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  text-align: left;
+  color: #e9e9e9;
+}
+
+.wrapper {
+  border: 1px solid #d0d0d0;
+  width: 500px;
+  padding: 10px 20px;
+  background: #FAFAFC;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  position: relative;
+  min-height: 100px;
+}
+
+.wrapper input {
+  border: 1px solid #E0E0E0;
+}
+
+.wrapper form {
+  margin-bottom: 10px;
+}
+
+.wrapper .description {
+  color: #e9e9e9;
+  position: absolute;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  font-size: 2em;  
+  font-weight: bold;
+  display: block;
+}
+
+.wrapper .password {
+  top: 50px;
+  left: -65px;
+}
+
+.wrapper .phrase {
+  top: 35px;
+  left: -50px;
+}
+
+.wrapper .sentence {
+  top: 45px;
+  left: -61px;
+}
+
+.wrapper .hash {
+  top: 25px;
+  left: -39px;
+}
+
+.jq_genhash_result, .jq_genpassword_result, .jq_genpassphrase_result, .jq_gensentence_result, .jq_genhash_result{
+  font-size: 2em;
+  padding: 2px;
+}
+
+.genbutton  {
+	height: 40px; 
+	width: 100px;
+	background: #d2d2d2;
+	border: 1px solid #acacac ;
+	font-size: 1.2em;
+	font-weight: bold;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+}
+
+.genpass-holder{
+	position: relative;
+	width: 300px;
+	
+}
+
+.genpass-line {
+	height: 30px;
+}
+
+.genpass-line input {
+	float: right;	
+}
+
+.genpass-line select {
+  float: right;
+}
+
+#gen_password, #gen_passphrase, #gen_sentence, #gen_hash {
+  margin-top: 5px;
+}
+
+
