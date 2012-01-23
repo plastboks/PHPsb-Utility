@@ -12,6 +12,7 @@ require_once('function/common.php');
 </head>
 
 <body>
+  <a href="http://github.com/plastboks" id="forkme"></a>
   <div class="wrapper">
     <span class="description password">Password</span>
     <div id="gen_password">
