@@ -91,6 +91,7 @@
           <div class="genpass-line"><span>Method: </span>
             <select name="cryptmethod">
               <option value="sha1crypt">SHA1</option>
+              <option value="sha256crypt">SHA256</option>
               <option value="md5crypt">MD5</option>
               <option value="descrypt">DES</option>
             </select>

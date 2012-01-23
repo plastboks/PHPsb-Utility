@@ -3,7 +3,12 @@
 
 // function for generating sha1 hash, reason for this function is for the possibility of change later.
 function sha1crypt($arg) {
-  return sha1($arg);
+  return hash('sha1',$arg);
+}
+
+// function for generating sha256 hash
+function sha256crypt($arg) {
+  return hash('sha256',$arg);
 }
 
 // function for generating md5 hash, the additional "$1$" is the prefix used to identify md5 hashes.
@@ -36,10 +41,12 @@ if ( strlen($userinput) > 32 ) {
 }
 
 // do some more checking of userinput. (never trust your users).
-switch($cryptmethod){
-
+switch ($cryptmethod) {
   case "sha1crypt":
     $genhash = "sha1crypt";
+    break;
+  case "sha256crypt":
+    $genhash = "sha256crypt";
     break;
   case "md5crypt":
     $genhash = "md5crypt";
@@ -51,8 +58,7 @@ switch($cryptmethod){
     $genhash = "descrypt";
     break;
   default:
-    die("This is not a supported function");
-
+   die("This is not a supported function");
 }
 
 // run the function
