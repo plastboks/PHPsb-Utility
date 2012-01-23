@@ -41,6 +41,10 @@ $('.genhash').live('click', function(){
   return false;
 });
 
+$('.genbase64').live('click', function(){
+  ajax_submit( $(this).closest('form'), $('.jq_genbase64_result'));
+  return false;
+});
 
 
 // No enter on forms 

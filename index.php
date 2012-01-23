@@ -110,7 +110,7 @@
         <div class="genpass-holder">
           <div class="genpass-line"><span>Input: </span><textarea name="input" size="32" value="" ></textarea></div>
           <div class="genpass-line base64method"><span>Method: </span>
-            <select name="cryptmethod">
+            <select name="method">
               <option value="encode">Encode</option>
               <option value="decode">Decode</option>
             </select>
