@@ -5,7 +5,7 @@
 <link rel="stylesheet" type="text/css" href="style.css" />
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
 <script type="text/javascript" src="javascript.js"></script>
-<title>Password Utility</title>
+<title>PHP Passwrd Generator</title>
 </head>
 
 <body>
