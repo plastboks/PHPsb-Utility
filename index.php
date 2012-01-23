@@ -123,6 +123,7 @@ require_once('function/common.php');
       <div class="jq_genbase64_result"></div>
     </div>
   </div>
+  <div id="footer"><p>footer footer footer footer</p></div>
 </body>
 </html>
 

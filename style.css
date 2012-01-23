@@ -145,4 +145,9 @@ body {
   margin-top: 5px;
 }
 
-
+#footer {
+  margin: 0 auto;
+  width: 500px;
+  color: #fff;
+  text-align: center;
+}
