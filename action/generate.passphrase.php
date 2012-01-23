@@ -20,7 +20,7 @@ function passphrase($array) {
   // get random word x number of times
   for($i=1; $i<=$array['i']; $i++) {
     // random
-    $s_tmp = rand(0, $tw);
+    $s_tmp = mt_rand(0, $tw);
     // get the word
     $s_tmp = $file[$s_tmp];
     // uppercase
@@ -37,7 +37,7 @@ function passphrase($array) {
     $digitString = '';
 
     for($i=1; $i<=$array['extra']; $i++) {
-      $d_tmp = rand(0, 9);
+      $d_tmp = mt_rand(0, 9);
       $digitString .= $d_tmp;
     }
 
