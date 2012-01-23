@@ -31,3 +31,16 @@ function cryptMethods() {
     'md5',
   );
 }
+
+function wordLists() {
+  $directory = scandir('lib/wordlists');
+  $wordlists = array();
+
+  foreach ($directory as $entry) {
+    if (preg_match('/^([a-z]{2})\.txt$/',$entry,$matches)) {
+      $wordlists[] = $matches[1];
+    }
+  }
+
+  return $wordlists;
+}
