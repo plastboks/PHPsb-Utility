@@ -8,20 +8,6 @@ body {
 	background: #575757;
 }
 
-.header {
-  margin: 0 auto;
-  width: 500px;
-  padding: 2px 20px 2px 0px;
-  margin-bottom: 0px;
-}
-
-.header h1 {
-  margin-bottom: 0px;
-  padding-bottom: 0px;
-  text-align: left;
-  color: #e9e9e9;
-}
-
 #forkme {
   background: url('fork.gray.png') no-repeat;
   height: 149px;
@@ -32,12 +18,19 @@ body {
   border: 0;
 }
 
-.wrapper {
+#wrapper {
+  margin: 0 auto;
+  width: 600px;
+}
+
+#wrapper h1 {
+  color: #e9e9e9;
+}
+
+.block {
   border: 1px solid #d0d0d0;
-  width: 500px;
   padding: 10px 20px;
   background: #FAFAFC;
-  margin: 0 auto;
   margin-top: 10px;
   margin-bottom: 10px;
   -webkit-border-radius: 10px;
@@ -47,15 +40,15 @@ body {
   min-height: 100px;
 }
 
-.wrapper input {
+.block input {
   border: 1px solid #E0E0E0;
 }
 
-.wrapper form {
+.block form {
   margin-bottom: 10px;
 }
 
-.wrapper .description {
+.block .description {
   color: #e9e9e9;
   position: absolute;
   -webkit-transform: rotate(-90deg);
@@ -66,36 +59,36 @@ body {
   display: block;
 }
 
-.wrapper .password {
+.block .password {
   top: 50px;
   left: -65px;
 }
 
-.wrapper .phrase {
+.block .phrase {
   top: 35px;
   left: -50px;
 }
 
-.wrapper .sentence {
+.block .sentence {
   top: 45px;
   left: -61px;
 }
 
-.wrapper .hash {
+.block .hash {
   top: 25px;
   left: -39px;
 }
 
-.wrapper .base64 {
+.block .base64 {
   top: 35px;
   left: -49px;
 }
 
-.wrapper .base64method {
+.block .base64method {
   margin-top: 40px;
 }
 
-.wrapper textarea {
+.block textarea {
   margin-left: 2px; 
   margin-right: 2px; 
   width: 352px; 
@@ -104,12 +97,12 @@ body {
   height: 33px; 
 }
 
-.wrapper .jq_genbase64_result {
+.block .jq_genbase64_result {
  width: 500px;
 }
 
 .jq_genbase64_result {
-  font-size: 1.5em;
+  font-size: 1.8em;
   padding: 2px;
 }
 
@@ -157,7 +150,6 @@ body {
 #footer {
   margin: 0 auto;
   width: 500px;
-  color: #fff;
   text-align: center;
 }
 
