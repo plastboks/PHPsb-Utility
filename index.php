@@ -1,6 +1,4 @@
-<?php
-require_once('function/common.php');
-?>
+<?php require_once('function/common.php'); ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -12,7 +10,7 @@ require_once('function/common.php');
 </head>
 
 <body>
-  <a href="http://github.com/plastboks" id="forkme"></a>
+  <div id="gitforkme"><a href="https://github.com/plastboks/PHPsb-Utility" id="forkme"></a></div>
   <div class="wrapper">
     <span class="description password">Password</span>
     <div id="gen_password">
@@ -132,7 +130,12 @@ require_once('function/common.php');
       <div class="jq_genbase64_result"></div>
     </div>
   </div>
-  <div id="footer"><p>This is the [P]assword, [H]ash, [P]assprhase, [s]entence, [b]ase64 Utility</p></div>
+  <div id="footer">
+    <p>This is the [P]assword, [H]ash, [P]assprhase, [s]entence, [b]ase64 Utility</p>
+    <p>All the generated passwords on this site is not stored in any way.</p> 
+    <p>All passwords is generated trough randomize functions.</p> 
+    <p>Check sourcecode at <a href="https://github.com/plastboks/PHPsb-Utility">github.com</a></p>
+  </div>
 </body>
 </html>
 

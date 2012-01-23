@@ -1,3 +1,7 @@
+if ($.browser.msie || $.browser.opera) {
+  window.location.href = "http://www.firefox.com";
+}
+
 function ajax_submit(form, output) {
   var my_form = form;
   var data = my_form.serialize();
