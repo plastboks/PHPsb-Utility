@@ -5,7 +5,6 @@ include_once('../function/common.php');
 
 // function for passphrase generation.
 function passphrase($array) {
-  
   // output
   $output = NULL;
 
@@ -14,7 +13,6 @@ function passphrase($array) {
 
   // outputfile
   $s_output = NULL;
-  $d_output = NULL;
 
   // get total words in inputfile
   $tw = array_pop(array_keys($file));
@@ -29,31 +27,32 @@ function passphrase($array) {
     if ($array['capitalize'] == true) {
       $s_tmp = ucfirst($s_tmp);
     }
-    // trim 
+    // trim
     $s_tmp = trim($s_tmp);
-    
-    // add to output string
-    $s_output .= $s_tmp;
+
+    $output[] = $s_tmp;
   }
 
   if ($array['extra'] == true) {
-    for($i=1; $i<=$array['extra']; $i++) {
-      // do some number findings
-      $d_tmp = rand(0, 9);
-    
-      // add to output string
-      $d_output .= $d_tmp;
-    }
-  }
- 
-  $output = $s_output . $d_output;
-  
-  if ($array['hax'] == true) {
-    $output = haxify($output);
-  }
-  
-  return $output;
+    $digitString = '';
 
+    for($i=1; $i<=$array['extra']; $i++) {
+      $d_tmp = rand(0, 9);
+      $digitString .= $d_tmp;
+    }
+
+    $output[] = $digitString;
+  }
+
+  $glue = '';
+
+  if ($array['spaces']) {
+    $glue = ' ';
+  }
+
+  $outString = implode($glue,$output);
+
+  return ($array['hax'])?haxify($outString):$outString;
 }
 
 // setup array for passphrase function 
@@ -67,26 +66,22 @@ $array['file'] = "../lib/wordlist";
 // itterations
 if ( isset($_POST['i']) ) {
   $array['i'] = filter_var($_POST['i']);
-} else {
-  $array['i'];
 }
 // trailing digits
 if ( isset($_POST['digits']) ) {
   $array['extra'] = filter_var($_POST['digits']);
-} else {
-  $array['extra'] = 0;
 }
 // capitalize
 if ( isset($_POST['capitalize']) ){
   $array['capitalize'] = 1;
-} else {
-  $array['capitalize'] = 0;
 }
 // leetify
 if ( isset($_POST['hax']) ) {
   $array['hax'] = 1;
-} else {
-  $array['hax'] = 0;
+}
+// spacify
+if ( isset($_POST['spaces']) ) {
+  $array['spaces'] = true;
 }
 
 // check if wordcount is lower than 1 and higher than 5
