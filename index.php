@@ -1,3 +1,6 @@
+<?php
+require_once('function/common.php');
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -91,10 +94,9 @@
           <div class="genpass-line"><span>Input (max 32): </span><input name="userinput" size="32" value="" /></div>
           <div class="genpass-line"><span>Method: </span>
             <select name="cryptmethod">
-              <option value="sha1crypt">SHA1</option>
-              <option value="sha256crypt">SHA256</option>
-              <option value="md5crypt">MD5</option>
-              <option value="descrypt">DES</option>
+<?php foreach (cryptMethods() as $method) { ?>
+              <option><?php echo $method ?></option>
+<?php } ?>
             </select>
           </div>
         </div>
