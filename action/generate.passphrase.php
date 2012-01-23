@@ -57,6 +57,7 @@ function passphrase($array) {
 
 // setup array for passphrase function
 $array = array(
+  'lang' => 'en',
   'file' => '../lib/wordlists/en.txt',
   'i' => 0,
   'extra' => 0,
@@ -84,6 +85,15 @@ if ( isset($_POST['hax']) ) {
 // spacify
 if ( isset($_POST['spaces']) ) {
   $array['spaces'] = true;
+}
+
+if (isset($_POST['lang']) ) {
+  $lang = $_POST['lang'];
+
+  if (preg_match('/[a-z]{2}/',$lang)) {
+    $array['file'] = "../lib/wordlists/$lang.txt";
+    $array['lang'] = $lang;
+  }
 }
 
 // check if wordcount is lower than 1 and higher than 5
