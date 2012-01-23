@@ -92,8 +92,25 @@
             <select name="cryptmethod">
               <option value="sha1crypt">SHA1</option>
               <option value="md5crypt">MD5</option>
-              <option value="base64crypt">Base64</option>
               <option value="descrypt">DES</option>
+            </select>
+          </div>
+        </div>
+        <p><input class="genhash genbutton" type="submit" name="submit" value="Generate" /></p>
+      </form>
+      <div class="jq_genhash_result"></div>
+    </div>
+  </div>
+  <div class="wrapper">
+    <span class="description base64">base64</span>
+    <div id="gen_hash">
+      <form method="post" action="action/generate.base64.php">
+        <div class="genpass-holder">
+          <div class="genpass-line"><span>Input: </span><textarea name="input" size="32" value="" ></textarea></div>
+          <div class="genpass-line"><span>Method: </span>
+            <select name="cryptmethod">
+              <option value="encode">Encode</option>
+              <option value="decode">Decode</option>
             </select>
           </div>
         </div>
