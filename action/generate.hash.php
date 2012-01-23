@@ -19,11 +19,6 @@ function md5crypt($argument){
   return $return;
 }
 
-// function for base64 encode, reason for this function is for the possibility of change later.
-function base64crypt($arg){
-  return base64_encode($arg);
-}
-
 // function for generating des hash.
 function descrypt($argument){
   $jumble = base64_encode(md5(rand(1,100000000)));
@@ -50,9 +45,6 @@ switch ($cryptmethod) {
     break;
   case "md5crypt":
     $genhash = "md5crypt";
-    break;
-  case "base64crypt":
-    $genhash = "base64crypt";
     break;
   case "descrypt":
     $genhash = "descrypt";

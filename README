@@ -1,4 +1,4 @@
 */ PHP Passwrd generator /*
 
-PHP password, passphrase, sentence and hash generator. Usefull when generating random password for customers ect.
+PHP password, passphrase, sentence, hash and base64 generator. Usefull when generating random password for customers ect.
 
