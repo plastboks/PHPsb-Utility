@@ -96,10 +96,15 @@ body {
 }
 
 .wrapper .jq_genbase64_result {
- width: 400px;
+ width: 500px;
 }
 
-.jq_genhash_result, .jq_genpassword_result, .jq_genpassphrase_result, .jq_gensentence_result, .jq_genhash_result, .jq_genbase64_result{
+.jq_genbase64_result {
+  font-size: 1.5em;
+  padding: 2px;
+}
+
+.jq_genhash_result, .jq_genpassword_result, .jq_genpassphrase_result, .jq_gensentence_result, .jq_genhash_result{
   font-size: 2em;
   padding: 2px;
 }
