@@ -107,10 +107,10 @@ require_once('function/common.php');
   </div>
   <div class="wrapper">
     <span class="description base64">base64</span>
-    <div id="gen_hash">
+    <div id="genbase64">
       <form method="post" action="action/generate.base64.php">
         <div class="genpass-holder">
-          <div class="genpass-line"><span>Input: </span><textarea name="input" size="32" value="" ></textarea></div>
+          <div class="genpass-line"><span>Input: </span><textarea name="input" rows="16" cols="45"></textarea></div>
           <div class="genpass-line base64method"><span>Method: </span>
             <select name="method">
               <option value="encode">Encode</option>
