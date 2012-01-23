@@ -108,16 +108,16 @@
       <form method="post" action="action/generate.base64.php">
         <div class="genpass-holder">
           <div class="genpass-line"><span>Input: </span><textarea name="input" size="32" value="" ></textarea></div>
-          <div class="genpass-line"><span>Method: </span>
+          <div class="genpass-line base64method"><span>Method: </span>
             <select name="cryptmethod">
               <option value="encode">Encode</option>
               <option value="decode">Decode</option>
             </select>
           </div>
         </div>
-        <p><input class="genhash genbutton" type="submit" name="submit" value="Generate" /></p>
+        <p><input class="genbase64 genbutton" type="submit" name="submit" value="Generate" /></p>
       </form>
-      <div class="jq_genhash_result"></div>
+      <div class="jq_genbase64_result"></div>
     </div>
   </div>
 </body>
