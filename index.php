@@ -18,11 +18,11 @@
       <div id="gen_password">
         <form method="post" action="action/generate.password.php">
           <div class="genpass-holder">
-            <div class="genpass-line"><span>Length for each password (max 32): </span> <input name="length" size="2" value="8" /></div>
+            <div class="genpass-line"><span>Length for each password (max 32): </span> <input class="jq_change"name="length" size="2" value="8" /></div>
 	          <div class="genpass-line"><span>Minimum lowercase: </span><input class="jq_change_input" name="lowercase" size="2" value="2" /></div>
 	          <div class="genpass-line"><span>Minimum uppercase: </span><input class="jq_change_input" name="uppercase" size="2" value="2" /></div>
 	          <div class="genpass-line"><span>Minimum numbers: </span><input class="jq_change_input" name="numbers" size="2" value="2" /></div>
-	          <div class="genpass-line"><span>Minimum symbols: </span><input class="jq_change_input" name="symbols" size="2" value="2" /></div>
+	          <div class="genpass-line"><span>Minimum symbols: </span><input class="jq_change_input_last" name="symbols" size="2" value="2" /></div>
 	          <div class="genpass-line"><span>No similar characters (1/l, 0/O, etc): </span> <input type="checkbox" name="nosimilar" checked="checked" /></div>
             <div class="genpass-line"><span>In given order: <input type="checkbox" name="givenorder" /></span></div>
           </div>
